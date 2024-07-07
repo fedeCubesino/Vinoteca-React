@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    width: 100%;
+    height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(133, 26, 81);
+  
+}
+.logo img {
+    width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+}
+.marca{
+    position: relative;
+    left: -10%;
+}
+.marca h1 {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: #e0b0ff;
+    -webkit-text-stroke: 0.9px #0a0113;
+    text-transform: uppercase;
+}
+.marca h1::before {
+    content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          color: #56070c;
+          -webkit-text-stroke: 0.2Px #260549;
+          overflow: hidden;
+          animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0% {
+      width: 0; }
+    100% {
+      width: 100%; } 
+    }
+.navbar .navbar-link {
+    list-style: none;
+    display: flex;
+}
+.navbar-item a {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+  }
+  .navbar-item a:hover{
+    color: aquamarine;
+  }
+.carrito {
+    position: relative;
+    right: -30%;
+}
+.contador {
+    position: absolute;
+    top: 0;
+    background-color: chocolate;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
